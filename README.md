@@ -1,4 +1,10 @@
-# Introduction to Supervised Learning
+# Using supervised learning to solve minesweeper
+
+I first encountered Minesweeper in my introductory AI class, where the challenge was to design an AI that could consistently achieve a specific success rate by the end of the quarter. While many approaches relied on deterministic rules and straightforward probability calculations to determine which cell to uncover next, I wanted to go beyond these conventional strategies.
+
+Instead of sticking to basic probabilistic guessing, I chose to explore the potential of machine learning. This decision allowed me to tackle the problem from a unique perspective, leveraging the ability of neural networks to recognize complex patterns and make informed predictions in situations where traditional rules falter. My journey into this project opened the door to exciting possibilities for solving Minesweeper using advanced AI techniques.
+
+## What Is Supervised Learning?
 
 Supervised learning is a type of machine learning where a model is trained using labeled data. The data consists of input-output pairs where the model learns to map inputs to the correct outputs. For example, in this project, the input is a representation of a board state, and the output is a label indicating probabilities of mines in specific cells. The goal is for the model to generalize its learning to make accurate predictions on unseen data.
 
@@ -48,7 +54,8 @@ The project uses a convolutional neural network (CNN) implemented in TensorFlow/
 - Reshape Layers: To handle the input and output formats specific to the board representation.
 
 The model was trained with the dataset, using 70% of the data for training, 20% for validation, and 10% for testing.
-Results
+
+## Results
 
 - The model was trained to predict the probability of mines in cells with 75% certainty.
 - Evaluation metrics such as binary accuracy and loss were used to assess performance.
@@ -76,3 +83,17 @@ This project demonstrates how supervised learning and CNNs can tackle complex pr
     <td><img src="src/Heatmap binary.png" alt="Loss"></td>
   </tr>
 </table>
+
+## Conclusion
+
+The supervised learning approach to solving Minesweeper showed promising results. The model could correctly identify bomb placements in complex scenarios, as evident from the heatmap visualizations. However, its practical usability was limited. While supervised learning is effective for mapping inputs to outputs in isolated states, it falls short in capturing the full complexity of Minesweeper gameplay.
+
+A critical limitation of this approach is the lack of an interactive agent that can make dynamic decisions while playing the game. With only 250,000 static board states, the model could not fully grasp the intricate dependencies and evolving patterns that Minesweeper demands.
+
+To address these limitations, I implemented a Deep Q-Network (DQN) model, a reinforcement learning approach. Unlike supervised learning, DQN allows an agent to actively play the game, learn from its actions, and optimize its strategy through trial and error. This approach captures the dynamic nature of Minesweeper far better than static datasets.
+
+You can check out the code and implementation details for my DQN model here: [Minesweeper Deep Q-Learning on GitHub](https://github.com/TanveenBal/Minesweeper-Deep-Q-Learning).
+
+Found something wrong in my code or have questions? Feel free to contact me:
+- Email: [tanveenbal@gmail.com](tanveenbal@gmail.com)
+- LinkedIn: [tanveenbal](https://www.linkedin.com/in/tanveenbal/)
