@@ -15,10 +15,6 @@ Supervised learning is a type of machine learning where a model is trained using
 3. Training: Use the labeled data to optimize the model’s parameters.
 4. Evaluation: Test the model on unseen data to measure its performance.
 
-## Purpose of the Project
-
-This project aims to determine whether a convolutional neural network (CNN) can predict the probabilities of mines in a board game scenario when simple rules fail, and advanced patterns or probabilities need to be used.
-
 ## Dataset Creation
 
 To achieve this, I created a dataset of 250,000 board states. These board states were extracted from scenarios where simple game rules no longer provide clear solutions, such as:
